@@ -1,0 +1,1469 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="smplx_right_hand_floating">
+  <link name="floating_base">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+
+  <link name="slide_x_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="virtual_x" type="prismatic">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="floating_base" />
+    <child link="slide_x_link" />
+    <axis xyz="1 0 0" />
+    <limit lower="-2.0" upper="2.0" effort="1000" velocity="10" />
+    <dynamics damping="50" friction="0" />
+  </joint>
+
+  <link name="slide_y_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="virtual_y" type="prismatic">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="slide_x_link" />
+    <child link="slide_y_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-2.0" upper="2.0" effort="1000" velocity="10" />
+    <dynamics damping="50" friction="0" />
+  </joint>
+
+  <joint name="virtual_z" type="prismatic">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="slide_y_link" />
+    <child link="R_Wrist_Base" />
+    <axis xyz="0 0 1" />
+    <limit lower="0.0" upper="2.0" effort="1000" velocity="10" />
+    <dynamics damping="50" friction="0" />
+  </joint>
+<material name="smplx_body" />
+  <link name="R_Wrist_Base">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <link name="R_Wrist__0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Wrist_x" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Wrist_Base" />
+    <child link="R_Wrist__0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-3.141592654" upper="3.141592654" effort="300" velocity="100" />
+    <dynamics damping="30" friction="0" />
+  </joint>
+  <link name="R_Wrist__1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Wrist_y" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Wrist__0" />
+    <child link="R_Wrist__1" />
+    <axis xyz="0 1 0" />
+    <limit lower="-3.141592654" upper="3.141592654" effort="300" velocity="100" />
+    <dynamics damping="30" friction="0" />
+  </joint>
+  <link name="R_Wrist">
+    <inertial>
+      <origin xyz="-0.0029 -0.0537 -0.0044" rpy="0 0 0" />
+      <mass value="0.2517497281" />
+      <inertia ixx="0.0001568274931" ixy="0" ixz="0" iyy="0.0001554814712" iyz="0" izz="0.0002698790652" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.0029 -0.0537 -0.0044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.0804 0.0318" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0029 -0.0537 -0.0044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.0804 0.0318" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="R_Wrist_z" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Wrist__1" />
+    <child link="R_Wrist" />
+    <axis xyz="0 0 1" />
+    <limit lower="-3.141592654" upper="3.141592654" effort="300" velocity="100" />
+    <dynamics damping="30" friction="0" />
+  </joint>
+  <link name="R_Index1__0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Index1_x" type="revolute">
+    <origin xyz="0.0196 -0.0999 -0.0118" rpy="0 0 0" />
+    <parent link="R_Wrist" />
+    <child link="R_Index1__0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.3490658504" upper="1.570796327" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Index1__1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Index1_y" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Index1__0" />
+    <child link="R_Index1__1" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Index1">
+    <inertial>
+      <origin xyz="0.0015 -0.016 0.0011" rpy="0 0 0" />
+      <mass value="0.008186638341" />
+      <inertia ixx="6.573958011e-07" ixy="3.213235471e-08" ixz="-2.342984198e-09" iyy="3.176630924e-07" iyz="2.499183144e-08" izz="6.585858884e-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0.0015 -0.016 0.0011" rpy="-0.09323070081 1.498008478 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.0091" length="0.01933494246" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0015 -0.016 0.0011" rpy="-0.09323070081 1.498008478 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.0091" length="0.01933494246" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.0006 -0.0064 0.0004" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0091" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0006 -0.0064 0.0004" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0091" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.0024 -0.0256 0.0018" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0091" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0024 -0.0256 0.0018" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0091" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="R_Index1_z" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Index1__1" />
+    <child link="R_Index1" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.3490658504" upper="0.3490658504" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Index2__0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Index2_x" type="revolute">
+    <origin xyz="0.003 -0.0319 0.0022" rpy="0 0 0" />
+    <parent link="R_Index1" />
+    <child link="R_Index2__0" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="1.745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Index2__1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Index2_y" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Index2__0" />
+    <child link="R_Index2__1" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Index2">
+    <inertial>
+      <origin xyz="0 -0.01125 -0.0012" rpy="0 0 0" />
+      <mass value="0.004301603965" />
+      <inertia ixx="2.005331031e-07" ixy="0" ixz="0" iyy="1.14534408e-07" iyz="-8.918383197e-09" izz="1.996082338e-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 -0.01125 -0.0012" rpy="3.141592654 1.467462002 1.570796327" />
+      <geometry>
+        <cylinder radius="0.0076" length="0.01357239846" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.01125 -0.0012" rpy="3.141592654 1.467462002 1.570796327" />
+      <geometry>
+        <cylinder radius="0.0076" length="0.01357239846" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 -0.0045 -0.0005" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0076" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0045 -0.0005" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0076" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 -0.018 -0.0019" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0076" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.018 -0.0019" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0076" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="R_Index2_z" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Index2__1" />
+    <child link="R_Index2" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Index3__0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Index3_x" type="revolute">
+    <origin xyz="0.0001 -0.0225 -0.0023" rpy="0 0 0" />
+    <parent link="R_Index2" />
+    <child link="R_Index3__0" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="1.396263402" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Index3__1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Index3_y" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Index3__0" />
+    <child link="R_Index3__1" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Index3">
+    <inertial>
+      <origin xyz="0.001 -0.01025 -0.0002" rpy="0 0 0" />
+      <mass value="0.003002917915" />
+      <inertia ixx="1.120121085e-07" ixy="4.902801955e-09" ixz="7.972035699e-11" iyy="6.223671064e-08" iyz="-8.171336592e-10" izz="1.12477144e-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0.001 -0.01025 -0.0002" rpy="3.044352228 1.554537597 1.570796327" />
+      <geometry>
+        <cylinder radius="0.0067" length="0.01236001618" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.001 -0.01025 -0.0002" rpy="3.044352228 1.554537597 1.570796327" />
+      <geometry>
+        <cylinder radius="0.0067" length="0.01236001618" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.0004 -0.0041 -0.0001" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0067" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0004 -0.0041 -0.0001" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0067" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.0016 -0.0164 -0.0003" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0067" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0016 -0.0164 -0.0003" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0067" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="R_Index3_z" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Index3__1" />
+    <child link="R_Index3" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Middle1__0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Middle1_x" type="revolute">
+    <origin xyz="-0.0037 -0.1074 -0.0094" rpy="0 0 0" />
+    <parent link="R_Wrist" />
+    <child link="R_Middle1__0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.3490658504" upper="1.570796327" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Middle1__1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Middle1_y" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Middle1__0" />
+    <child link="R_Middle1__1" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Middle1">
+    <inertial>
+      <origin xyz="-0.002 -0.0153 0.0004" rpy="0 0 0" />
+      <mass value="0.008631281298" />
+      <inertia ixx="6.787220368e-07" ixy="-4.277983427e-08" ixz="9.299963973e-10" iyy="3.563232857e-07" iyz="7.129972379e-09" izz="6.841470158e-07" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.002 -0.0153 0.0004" rpy="0.1296722423 1.54906062 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.0094" length="0.01856017241" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.002 -0.0153 0.0004" rpy="0.1296722423 1.54906062 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.0094" length="0.01856017241" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.0008 -0.0061 0.0002" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0094" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0008 -0.0061 0.0002" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0094" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.0032 -0.0245 0.0006" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0094" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0032 -0.0245 0.0006" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0094" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="R_Middle1_z" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Middle1__1" />
+    <child link="R_Middle1" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.3490658504" upper="0.3490658504" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Middle2__0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Middle2_x" type="revolute">
+    <origin xyz="-0.004 -0.0306 0.0008" rpy="0 0 0" />
+    <parent link="R_Middle1" />
+    <child link="R_Middle2__0" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="1.745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Middle2__1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Middle2_y" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Middle2__0" />
+    <child link="R_Middle2__1" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Middle2">
+    <inertial>
+      <origin xyz="-0.00205 -0.01175 -0.001" rpy="0 0 0" />
+      <mass value="0.00364886128" />
+      <inertia ixx="1.649209388e-07" ixy="-1.453372676e-08" ixz="-1.236912916e-09" iyy="8.552762176e-08" iyz="-6.976188847e-09" izz="1.669041225e-07" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.00205 -0.01175 -0.001" rpy="-2.966730647 1.485894533 1.570796327" />
+      <geometry>
+        <cylinder radius="0.007" length="0.01437010786" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00205 -0.01175 -0.001" rpy="-2.966730647 1.485894533 1.570796327" />
+      <geometry>
+        <cylinder radius="0.007" length="0.01437010786" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.0008 -0.0047 -0.0004" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.007" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0008 -0.0047 -0.0004" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.007" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.0033 -0.0188 -0.0016" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.007" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0033 -0.0188 -0.0016" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.007" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="R_Middle2_z" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Middle2__1" />
+    <child link="R_Middle2" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Middle3__0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Middle3_x" type="revolute">
+    <origin xyz="-0.0041 -0.0235 -0.002" rpy="0 0 0" />
+    <parent link="R_Middle2" />
+    <child link="R_Middle3__0" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="1.396263402" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Middle3__1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Middle3_y" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Middle3__0" />
+    <child link="R_Middle3__1" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Middle3">
+    <inertial>
+      <origin xyz="-0.00105 -0.01075 0" rpy="0 0 0" />
+      <mass value="0.002766441234" />
+      <inertia ixx="1.040651238e-07" ixy="-5.230845931e-09" ixz="0" iyy="5.268617676e-08" iyz="0" izz="1.045922633e-07" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.00105 -0.01075 0" rpy="-1.671232439 1.570796327 0" />
+      <geometry>
+        <cylinder radius="0.0064" length="0.01296533841" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00105 -0.01075 0" rpy="-1.671232439 1.570796327 0" />
+      <geometry>
+        <cylinder radius="0.0064" length="0.01296533841" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.0004 -0.0043 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0064" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0004 -0.0043 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0064" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.0017 -0.0172 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0064" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0017 -0.0172 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0064" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="R_Middle3_z" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Middle3__1" />
+    <child link="R_Middle3" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Pinky1__0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Pinky1_x" type="revolute">
+    <origin xyz="-0.0435 -0.082 -0.0176" rpy="0 0 0" />
+    <parent link="R_Wrist" />
+    <child link="R_Pinky1__0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.3490658504" upper="1.570796327" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Pinky1__1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Pinky1_y" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Pinky1__0" />
+    <child link="R_Pinky1__1" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Pinky1">
+    <inertial>
+      <origin xyz="-0.006 -0.00775 -0.00055" rpy="0 0 0" />
+      <mass value="0.002921429338" />
+      <inertia ixx="8.767120904e-08" ixy="-2.136678232e-08" ixz="-1.608252432e-09" iyy="7.661447357e-08" iyz="-2.077326059e-09" izz="1.040568762e-07" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.006 -0.00775 -0.00055" rpy="-2.484153458 1.495669171 1.570796327" />
+      <geometry>
+        <cylinder radius="0.0067" length="0.01178218995" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.006 -0.00775 -0.00055" rpy="-2.484153458 1.495669171 1.570796327" />
+      <geometry>
+        <cylinder radius="0.0067" length="0.01178218995" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.0024 -0.0031 -0.0002" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0067" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0024 -0.0031 -0.0002" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0067" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.0096 -0.0124 -0.0009" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0067" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0096 -0.0124 -0.0009" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0067" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="R_Pinky1_z" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Pinky1__1" />
+    <child link="R_Pinky1" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.3490658504" upper="0.3490658504" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Pinky2__0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Pinky2_x" type="revolute">
+    <origin xyz="-0.012 -0.0155 -0.0011" rpy="0 0 0" />
+    <parent link="R_Pinky1" />
+    <child link="R_Pinky2__0" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="1.745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Pinky2__1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Pinky2_y" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Pinky2__0" />
+    <child link="R_Pinky2__1" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Pinky2">
+    <inertial>
+      <origin xyz="-0.0056 -0.00775 -0.0008" rpy="0 0 0" />
+      <mass value="0.002685285112" />
+      <inertia ixx="7.761149818e-08" ixy="-1.860918802e-08" ixz="-2.000987959e-09" iyy="6.576741504e-08" iyz="-2.736645297e-09" izz="9.092395337e-08" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.0056 -0.00775 -0.0008" rpy="-2.512979923 1.463681003 1.570796327" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.0115641688" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0056 -0.00775 -0.0008" rpy="-2.512979923 1.463681003 1.570796327" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.0115641688" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.0022 -0.0031 -0.0003" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0065" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0022 -0.0031 -0.0003" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0065" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.009 -0.0124 -0.0013" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0065" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.009 -0.0124 -0.0013" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0065" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="R_Pinky2_z" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Pinky2__1" />
+    <child link="R_Pinky2" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Pinky3__0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Pinky3_x" type="revolute">
+    <origin xyz="-0.0112 -0.0155 -0.0017" rpy="0 0 0" />
+    <parent link="R_Pinky2" />
+    <child link="R_Pinky3__0" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="1.396263402" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Pinky3__1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Pinky3_y" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Pinky3__0" />
+    <child link="R_Pinky3__1" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Pinky3">
+    <inertial>
+      <origin xyz="-0.0046 -0.00675 0.0002" rpy="0 0 0" />
+      <mass value="0.001425667864" />
+      <inertia ixx="2.809879229e-08" ixy="-7.197044712e-09" ixz="1.777048077e-10" iyy="2.266451581e-08" iyz="2.570373111e-10" izz="3.306818031e-08" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.0046 -0.00675 0.0002" rpy="0.6047598619 1.546109985 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.0052" length="0.009849365462" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0046 -0.00675 0.0002" rpy="0.6047598619 1.546109985 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.0052" length="0.009849365462" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.0018 -0.0027 0.0001" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0052" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0018 -0.0027 0.0001" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0052" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.0074 -0.0108 0.0003" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0052" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0074 -0.0108 0.0003" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0052" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="R_Pinky3_z" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Pinky3__1" />
+    <child link="R_Pinky3" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Ring1__0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Ring1_x" type="revolute">
+    <origin xyz="-0.0271 -0.0954 -0.0124" rpy="0 0 0" />
+    <parent link="R_Wrist" />
+    <child link="R_Ring1__0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.3490658504" upper="1.570796327" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Ring1__1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Ring1_y" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Ring1__0" />
+    <child link="R_Ring1__1" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Ring1">
+    <inertial>
+      <origin xyz="-0.00265 -0.014 0.00075" rpy="0 0 0" />
+      <mass value="0.005584289022" />
+      <inertia ixx="3.446382853e-07" ixy="-3.305794133e-08" ixz="1.770961142e-09" iyy="1.715855482e-07" iyz="9.597466837e-09" izz="3.502241125e-07" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.00265 -0.014 0.00075" rpy="0.1822157691 1.517276058 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.008" length="0.01710730838" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00265 -0.014 0.00075" rpy="0.1822157691 1.517276058 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.008" length="0.01710730838" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.0011 -0.0056 0.0003" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0011 -0.0056 0.0003" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.0042 -0.0224 0.0012" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0042 -0.0224 0.0012" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="R_Ring1_z" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Ring1__1" />
+    <child link="R_Ring1" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.3490658504" upper="0.3490658504" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Ring2__0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Ring2_x" type="revolute">
+    <origin xyz="-0.0053 -0.028 0.0015" rpy="0 0 0" />
+    <parent link="R_Ring1" />
+    <child link="R_Ring2__0" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="1.745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Ring2__1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Ring2_y" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Ring2__0" />
+    <child link="R_Ring2__1" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Ring2">
+    <inertial>
+      <origin xyz="-0.00355 -0.01145 -0.00075" rpy="0 0 0" />
+      <mass value="0.004172471219" />
+      <inertia ixx="1.929594938e-07" ixy="-2.750555873e-08" ixz="-1.806934515e-09" iyy="1.139586359e-07" iyz="-5.756977409e-09" izz="2.012144298e-07" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.00355 -0.01145 -0.00075" rpy="-2.838076084 1.505197155 1.570796327" />
+      <geometry>
+        <cylinder radius="0.0074" length="0.01438714704" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00355 -0.01145 -0.00075" rpy="-2.838076084 1.505197155 1.570796327" />
+      <geometry>
+        <cylinder radius="0.0074" length="0.01438714704" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.0014 -0.0046 -0.0003" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0074" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0014 -0.0046 -0.0003" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0074" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.0057 -0.0183 -0.0012" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0074" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0057 -0.0183 -0.0012" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0074" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="R_Ring2_z" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Ring2__1" />
+    <child link="R_Ring2" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Ring3__0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Ring3_x" type="revolute">
+    <origin xyz="-0.0071 -0.0228 -0.0015" rpy="0 0 0" />
+    <parent link="R_Ring2" />
+    <child link="R_Ring3__0" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="1.396263402" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Ring3__1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Ring3_y" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Ring3__0" />
+    <child link="R_Ring3__1" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Ring3">
+    <inertial>
+      <origin xyz="-0.00255 -0.01045 0.00025" rpy="0 0 0" />
+      <mass value="0.002361716453" />
+      <inertia ixx="8.124532714e-08" ixy="-1.040793033e-08" ixz="2.497903278e-10" iyy="4.185903287e-08" iyz="1.007219064e-09" izz="8.38023206e-08" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.00255 -0.01045 0.00025" rpy="0.2430281685 1.546800933 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.006" length="0.0128821582" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00255 -0.01045 0.00025" rpy="0.2430281685 1.546800933 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.006" length="0.0128821582" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.001 -0.0042 0.0001" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.006" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.001 -0.0042 0.0001" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.006" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.0041 -0.0167 0.0004" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.006" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0041 -0.0167 0.0004" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.006" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="R_Ring3_z" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Ring3__1" />
+    <child link="R_Ring3" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Thumb1__0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Thumb1_x" type="revolute">
+    <origin xyz="0.0259 -0.0386 -0.0211" rpy="0 0 0" />
+    <parent link="R_Wrist" />
+    <child link="R_Thumb1__0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.7853981634" upper="0.7853981634" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Thumb1__1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Thumb1_y" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Thumb1__0" />
+    <child link="R_Thumb1__1" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.7853981634" upper="2.268928028" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Thumb1">
+    <inertial>
+      <origin xyz="0.0125 -0.0085 0.0005" rpy="0 0 0" />
+      <mass value="0.01544881562" />
+      <inertia ixx="1.174752667e-06" ixy="2.442554824e-07" ixz="-1.436796955e-08" iyy="1.367858178e-06" iyz="9.770219295e-09" izz="1.533377187e-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0.0125 -0.0085 0.0005" rpy="-0.9728163233 1.512040504 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.012" length="0.01814938015" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0125 -0.0085 0.0005" rpy="-0.9728163233 1.512040504 -1.570796327" />
+      <geometry>
+        <cylinder radius="0.012" length="0.01814938015" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.005 -0.0034 0.0002" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.012" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.005 -0.0034 0.0002" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.012" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.02 -0.0136 0.0008" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.012" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.02 -0.0136 0.0008" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.012" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="R_Thumb1_z" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Thumb1__1" />
+    <child link="R_Thumb1" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.221730476" upper="0.5235987756" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Thumb2__0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Thumb2_x" type="revolute">
+    <origin xyz="0.025 -0.017 0.001" rpy="0 0 0" />
+    <parent link="R_Thumb1" />
+    <child link="R_Thumb2__0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Thumb2__1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Thumb2_y" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Thumb2__0" />
+    <child link="R_Thumb2__1" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Thumb2">
+    <inertial>
+      <origin xyz="0.00775 -0.01025 -0.00255" rpy="0 0 0" />
+      <mass value="0.008050884388" />
+      <inertia ixx="4.697005488e-07" ixy="9.868995535e-08" ixz="2.487307818e-08" iyy="4.137943585e-07" iyz="-3.289665178e-08" izz="5.360287572e-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0.00775 -0.01025 -0.00255" rpy="2.508949777 1.32390562 1.570796327" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.0157286363" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00775 -0.01025 -0.00255" rpy="2.508949777 1.32390562 1.570796327" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.0157286363" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.0031 -0.0041 -0.001" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0095" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0031 -0.0041 -0.001" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0095" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.0124 -0.0164 -0.0041" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0095" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0124 -0.0164 -0.0041" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0095" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="R_Thumb2_z" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Thumb2__1" />
+    <child link="R_Thumb2" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.9599310886" upper="0.3490658504" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Thumb3__0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Thumb3_x" type="revolute">
+    <origin xyz="0.0155 -0.0205 -0.0052" rpy="0 0 0" />
+    <parent link="R_Thumb2" />
+    <child link="R_Thumb3__0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Thumb3__1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-06" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+  </link>
+  <joint name="R_Thumb3_y" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Thumb3__0" />
+    <child link="R_Thumb3__1" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.001745329252" upper="0.001745329252" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+  <link name="R_Thumb3">
+    <inertial>
+      <origin xyz="0.00875 -0.00925 -0.00155" rpy="0 0 0" />
+      <mass value="0.006971707087" />
+      <inertia ixx="3.533992706e-07" ixy="8.802320733e-08" ixz="1.506703549e-08" iyy="3.436113618e-07" iyz="-1.592800894e-08" izz="4.339380507e-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0.00875 -0.00925 -0.00155" rpy="2.391170492 1.401268115 1.570796327" />
+      <geometry>
+        <cylinder radius="0.009" length="0.01539707764" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00875 -0.00925 -0.00155" rpy="2.391170492 1.401268115 1.570796327" />
+      <geometry>
+        <cylinder radius="0.009" length="0.01539707764" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.0035 -0.0037 -0.0006" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.009" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0035 -0.0037 -0.0006" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.009" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.014 -0.0148 -0.0025" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.009" />
+      </geometry>
+      <material name="smplx_body">
+        <color rgba="0.8 0.6 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.014 -0.0148 -0.0025" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.009" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="R_Thumb3_z" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="R_Thumb3__1" />
+    <child link="R_Thumb3" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.396263402" upper="0.2617993878" effort="10" velocity="5" />
+    <dynamics damping="10" friction="0" />
+  </joint>
+</robot>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="smplx_left_palm_wrist">
+  <compiler coordinate="local" />
+  <worldbody>
+    <light pos="0 0 2" dir="0 0 -1" diffuse="1 1 1" specular="0.1 0.1 0.1" directional="true" />
+    <body name="L_Wrist_Base" pos="0 0 0">
+      <joint name="floating_base_joint" type="free" limited="false" actuatorfrclimited="false" />
+      <body name="L_Wrist" pos="0 0 0" quat="1 0 0 0">
+        <joint name="L_Wrist_x" type="hinge" pos="0 0 0" axis="1 0 0" stiffness="300" damping="30" armature="0.02" range="-180.0000 180.0000" limited="true" />
+        <joint name="L_Wrist_y" type="hinge" pos="0 0 0" axis="0 1 0" stiffness="300" damping="30" armature="0.02" range="-180.0000 180.0000" limited="true" />
+        <joint name="L_Wrist_z" type="hinge" pos="0 0 0" axis="0 0 1" stiffness="300" damping="30" armature="0.02" range="-180.0000 180.0000" limited="true" />
+        <geom type="box" density="1198.336433" pos="-0.0031 0.0523 -0.0013" size="0.04 0.0428 0.0159" quat="1.0000 0.0000 0.0000 0.0000" conaffinity="1" condim="3" contype="7" margin="0.001" rgba="0.8 0.6 .4 1" />
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <motor name="L_Wrist_x" joint="L_Wrist_x" gear="500" />
+    <motor name="L_Wrist_y" joint="L_Wrist_y" gear="500" />
+    <motor name="L_Wrist_z" joint="L_Wrist_z" gear="500" />
+  </actuator>
+  <contact />
+  <sensor />
+  <size njmax="64" nconmax="64" />
+</mujoco>

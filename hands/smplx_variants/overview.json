@@ -1,0 +1,47 @@
+{
+  "generator": "smplx_variants/generate_smplx_variants.py",
+  "source_mjcf": "ProtoMotions/protomotions/data/assets/mjcf/smplx_humanoid.xml",
+  "variants": {
+    "full_fingers": {
+      "mjcf": "smplx_variants/full_fingers/smplx_full_fingers.xml",
+      "urdf": "smplx_variants/full_fingers/smplx_full_fingers.urdf",
+      "metadata": "smplx_variants/full_fingers/metadata.json",
+      "body_count": 52,
+      "articulated_joint_count": 153
+    },
+    "hands_only": {
+      "metadata": "smplx_variants/hands_only/metadata.json",
+      "assets": {
+        "left": {
+          "mjcf": "smplx_variants/hands_only/smplx_left_hand.xml",
+          "urdf": "smplx_variants/hands_only/smplx_left_hand.urdf",
+          "body_count": 17,
+          "articulated_joint_count": 48
+        },
+        "right": {
+          "mjcf": "smplx_variants/hands_only/smplx_right_hand.xml",
+          "urdf": "smplx_variants/hands_only/smplx_right_hand.urdf",
+          "body_count": 17,
+          "articulated_joint_count": 48
+        }
+      }
+    },
+    "palms_only": {
+      "metadata": "smplx_variants/palms_only/metadata.json",
+      "assets": {
+        "left": {
+          "mjcf": "smplx_variants/palms_only/smplx_left_palm_wrist.xml",
+          "urdf": "smplx_variants/palms_only/smplx_left_palm_wrist.urdf",
+          "body_count": 2,
+          "articulated_joint_count": 3
+        },
+        "right": {
+          "mjcf": "smplx_variants/palms_only/smplx_right_palm_wrist.xml",
+          "urdf": "smplx_variants/palms_only/smplx_right_palm_wrist.urdf",
+          "body_count": 2,
+          "articulated_joint_count": 3
+        }
+      }
+    }
+  }
+}

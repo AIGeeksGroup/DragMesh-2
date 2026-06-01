@@ -1,0 +1,162 @@
+params:
+  seed: 42
+
+  algo:
+    # Custom subclass registered by pica/a2c_agent.py:register_pica_a2c_agent.
+    # train.py auto-registers when this name is detected before runner.load().
+    name: pica_a2c_continuous
+
+  model:
+    name: continuous_a2c_logstd
+
+  network:
+    name: gla_actor_critic
+    separate: false
+
+    space:
+      continuous:
+        mu_activation: None
+        sigma_activation: None
+        mu_init:
+          name: default
+        sigma_init:
+          name: const_initializer
+          val: -2.0
+        fixed_sigma: true
+
+    mlp:
+      units: [512, 512, 256]
+      activation: elu
+      initializer:
+        name: default
+      regularizer:
+        name: None
+
+    gla:
+      history_length: 16
+      token_dim: 102
+      hidden_size: 128
+      num_heads: 4
+      expand_k: 0.5
+      expand_v: 1.0
+      mode: chunk
+      pool: last
+
+    # `phys_aux` is auto-populated by train.py from
+    # config.physical_auxiliary (single source of truth).
+
+  load_checkpoint: false
+
+  config:
+    name: HandDrag
+    full_experiment_name: hand_drag_gla_pica_drand14_aux_v2c_save25
+    env_name: hand_drag
+    multi_gpu: false
+    ppo: true
+    mixed_precision: false
+    torch_compile: false
+    normalize_input: true
+    normalize_value: true
+    value_bootstrap: true
+
+    num_actors: 64
+
+    reward_shaper:
+      scale_value: 1.0
+
+    normalize_advantage: true
+    gamma: 0.99
+    tau: 0.95
+    learning_rate: 3.0e-4
+    lr_schedule: adaptive
+    kl_threshold: 0.008
+    score_to_win: 100000
+    max_epochs: 100
+    save_best_after: 100000
+    save_frequency: 25
+    print_stats: true
+    grad_norm: 1.0
+    entropy_coef: 0.0
+    truncate_grads: true
+    e_clip: 0.2
+    horizon_length: 32
+    minibatch_size: 32768
+    mini_epochs: 5
+    critic_coef: 1.0
+    clip_value: true
+    seq_length: 4
+    bounds_loss_coef: 0.01
+
+    # PICA v1 (calibrated)
+    physical_regularization:
+      enabled: true
+
+      action_bound:
+        enabled: true
+        threshold: 0.90
+        weight: 20.0
+
+      contact_distance:
+        enabled: true
+        safe_dist: 0.08
+        weight: 0.5
+
+      slip_action:
+        enabled: false
+        weight: 0.0
+
+      action_smoothness:
+        enabled: false
+        weight: 0.0
+
+    # PICA v2a (drand12)
+    dynamics_randomization:
+      enabled: true
+      damping_scale:
+        enabled: true
+        range: [1.0, 4.0]
+      friction_scale:
+        enabled: false
+        range: [1.0, 1.0]
+
+    # ─────────────────────────────────────────────────────────────────────
+    # PICA v2c — causal-horizon physical auxiliary targets.
+    #
+    # The auxiliary head predicts past-window contact-response signals from
+    # the GLA temporal feature: "what just happened in the last K steps?".
+    # Hypothesis: an encoder that can recover q_response / max_dist /
+    # detach_proxy / tracking_stress from history alone has a useful latent
+    # representation of contact state, which PPO can exploit for damping
+    # robustness.
+    #
+    # All four targets are MSE in normalized space (RunningMeanStd applies).
+    # The detach_proxy_K target was originally specified as BCEWithLogits;
+    # since rl_games normalizes the entire obs vector before the network
+    # sees it, the binary target is z-scored at forward time and BCE would
+    # be mathematically inconsistent. MSE on the normalized binary target is
+    # the v2c-MVP choice; BCE-with-bypass is a v2c.1 follow-up.
+    # ─────────────────────────────────────────────────────────────────────
+    physical_auxiliary:
+      enabled: true
+      mode: causal_horizon
+      horizon: 5
+      targets:
+        q_response_K:    { enabled: true }
+        max_dist_K:      { enabled: true }
+        detach_proxy_K:  { enabled: true }
+        tracking_stress: { enabled: true }
+      weights:
+        q_response_K:    1.0
+        max_dist_K:      1.0
+        detach_proxy_K:  0.5
+        tracking_stress: 0.5
+      gating:
+        # Computed but NOT applied to the loss (z-score issue).
+        enabled: false
+        d_valid: 0.10
+        sharpness: 80.0
+      warmup:
+        enabled: true
+        start_epoch: 10
+        end_epoch:   40
+        max_weight:  0.01

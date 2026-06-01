@@ -1,0 +1,13 @@
+numpy
+scipy
+pyyaml
+opencv-python
+imageio
+Pillow
+open3d
+gym
+rl-games
+torch
+tensorboard
+tqdm
+wandb

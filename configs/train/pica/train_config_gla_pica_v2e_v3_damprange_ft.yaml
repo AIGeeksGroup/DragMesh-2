@@ -1,0 +1,178 @@
+params:
+  seed: 42
+
+  algo:
+    name: pica_a2c_continuous
+
+  model:
+    name: continuous_a2c_logstd
+
+  network:
+    name: gla_actor_critic
+    separate: false
+
+    space:
+      continuous:
+        mu_activation: None
+        sigma_activation: None
+        mu_init:
+          name: default
+        sigma_init:
+          name: const_initializer
+          val: -2.0
+        fixed_sigma: true
+
+    mlp:
+      units: [512, 512, 256]
+      activation: elu
+      initializer:
+        name: default
+      regularizer:
+        name: None
+
+    gla:
+      history_length: 16
+      token_dim: 102
+      hidden_size: 128
+      num_heads: 4
+      expand_k: 0.5
+      expand_v: 1.0
+      mode: chunk
+      pool: last
+
+  load_checkpoint: false  # pass --checkpoint <BEST_CKPT_PATH>
+
+  config:
+    name: HandDrag
+    full_experiment_name: hand_drag_gla_pica_v2e_v3_damprange_ft
+    env_name: hand_drag
+    multi_gpu: false
+    ppo: true
+    mixed_precision: false
+    normalize_input: true
+    normalize_value: true
+    value_bootstrap: true
+
+    num_actors: 64
+
+    reward_shaper:
+      scale_value: 1.0
+
+    normalize_advantage: true
+    gamma: 0.99
+    tau: 0.95
+    # Slightly lower than v2d_both's 3e-4 since we are extending damping range,
+    # not changing reward shape -- a smaller LR limits drift from the best ckpt.
+    learning_rate: 1.0e-4
+    lr_schedule: adaptive
+    kl_threshold: 0.008
+    score_to_win: 100000
+    max_epochs: 25
+    save_best_after: 0
+    save_frequency: 5
+    print_stats: true
+    grad_norm: 1.0
+    entropy_coef: 0.0
+    truncate_grads: true
+    e_clip: 0.15
+    horizon_length: 32
+    minibatch_size: 32768
+    mini_epochs: 5
+    critic_coef: 1.0
+    clip_value: true
+    seq_length: 4
+    bounds_loss_coef: 0.01
+
+    task_progress_observation:
+      enabled: true
+
+    # v2d-both physical regularization, kept identical to best's recipe.
+    physical_regularization:
+      enabled: true
+      action_bound:
+        enabled: true
+        threshold: 0.90
+        weight: 20.0
+      contact_distance:
+        enabled: true
+        safe_dist: 0.08
+        weight: 0.5
+      slip_action:
+        enabled: false
+        weight: 0.0
+      action_smoothness:
+        enabled: false
+        weight: 0.0
+
+    # The ONLY substantive change vs v2d_both_ft: damping range covers [1, 4]
+    # uniformly. We keep damp=1 in distribution so v2e_v3 cannot forget the
+    # easy case the way v2e_v2 did with range [2.0, 4.0].
+    dynamics_randomization:
+      enabled: true
+      damping_scale:
+        enabled: true
+        range: [1.0, 4.0]
+      friction_scale:
+        enabled: false
+        range: [1.0, 1.0]
+
+    physical_auxiliary:
+      enabled: true
+      mode: causal_horizon
+      horizon: 5
+      targets:
+        q_response_K:    { enabled: true }
+        max_dist_K:      { enabled: true }
+        detach_proxy_K:  { enabled: true }
+        tracking_stress: { enabled: true }
+      weights:
+        q_response_K:    1.0
+        max_dist_K:      1.0
+        detach_proxy_K:  0.5
+        tracking_stress: 0.5
+      gating:
+        enabled: false
+        d_valid: 0.10
+        sharpness: 80.0
+      warmup:
+        enabled: true
+        start_epoch: 0
+        end_epoch:   10
+        max_weight:  0.01
+
+    # ARAM on from the start, v2d defaults. This is what best was trained
+    # with -- we deliberately do NOT delay it the way v2e_v2 did.
+    aram:
+      enabled: true
+      start_after_success: 0.7
+      target_clip:         0.7
+      lambda_lr:           0.005
+      lambda_max:          1.0
+      lambda_init:         0.0
+      resistance_gate:
+        enabled:         true
+        min_action_l2:   1.0
+        min_stall_steps: 5
+        q_response_min:  0.005
+        contact_dist:    0.10
+
+    # Reconfig reward: kept on, identical to v2d_both_ft. Best was trained
+    # with this on so we should not silently drop it.
+    reconfig_reward:
+      enabled:                  true
+      contact_dist:             0.10
+      min_action_l2:            1.0
+      progress_stall_threshold: 0.02
+      cooldown_steps:           10
+      weight_contact_improve:   0.2
+      weight_response_improve:  1.0
+      weight_slip_reduce:       0.5
+      action_delta_threshold:   4.0
+      hand_velocity_threshold:  8.0
+
+    # stall_pull: DISABLED. Two prior runs confirmed gate_rate == 0 across
+    # damping ranges [1.0, 2.5] and [2.0, 4.0]; the reward never fires and
+    # adds no gradient. Keeping it disabled removes a dead reward channel
+    # and keeps r_stall_pull at literal zero in the CSV.
+    stall_pull_reward:
+      enabled: false

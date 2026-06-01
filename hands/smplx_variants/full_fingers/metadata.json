@@ -1,0 +1,5059 @@
+{
+  "variant_name": "full_fingers",
+  "robot_name": "smplx_full_fingers",
+  "paths": {
+    "mjcf": "smplx_variants/full_fingers/smplx_full_fingers.xml",
+    "urdf": "smplx_variants/full_fingers/smplx_full_fingers.urdf",
+    "source_mjcf": "ProtoMotions/protomotions/data/assets/mjcf/smplx_humanoid.xml",
+    "source_usd": "ProtoMotions/protomotions/data/assets/usd/smplx_humanoid.usda"
+  },
+  "protomotions_asset_config": {
+    "asset_root": "smplx_variants/full_fingers",
+    "asset_file_name": "smplx_full_fingers.xml",
+    "fix_base_link": false,
+    "self_collisions": true
+  },
+  "gym_loader_hints": {
+    "asset_root": "smplx_variants/full_fingers",
+    "asset_file_name": "smplx_full_fingers.urdf",
+    "fix_base_link": false,
+    "collapse_fixed_joints": false
+  },
+  "counts": {
+    "body_count": 52,
+    "articulated_joint_count": 153,
+    "urdf_joint_count": 153
+  },
+  "groups": {
+    "wrist_bodies": [
+      "L_Wrist",
+      "R_Wrist"
+    ],
+    "finger_bodies": [
+      "L_Index1",
+      "L_Index2",
+      "L_Index3",
+      "L_Middle1",
+      "L_Middle2",
+      "L_Middle3",
+      "L_Pinky1",
+      "L_Pinky2",
+      "L_Pinky3",
+      "L_Ring1",
+      "L_Ring2",
+      "L_Ring3",
+      "L_Thumb1",
+      "L_Thumb2",
+      "L_Thumb3",
+      "R_Index1",
+      "R_Index2",
+      "R_Index3",
+      "R_Middle1",
+      "R_Middle2",
+      "R_Middle3",
+      "R_Pinky1",
+      "R_Pinky2",
+      "R_Pinky3",
+      "R_Ring1",
+      "R_Ring2",
+      "R_Ring3",
+      "R_Thumb1",
+      "R_Thumb2",
+      "R_Thumb3"
+    ],
+    "fingertip_bodies": [
+      "L_Index3",
+      "L_Middle3",
+      "L_Pinky3",
+      "L_Ring3",
+      "L_Thumb3",
+      "R_Index3",
+      "R_Middle3",
+      "R_Pinky3",
+      "R_Ring3",
+      "R_Thumb3"
+    ],
+    "contact_bodies": [
+      "L_Index1",
+      "L_Index2",
+      "L_Index3",
+      "L_Middle1",
+      "L_Middle2",
+      "L_Middle3",
+      "L_Pinky1",
+      "L_Pinky2",
+      "L_Pinky3",
+      "L_Ring1",
+      "L_Ring2",
+      "L_Ring3",
+      "L_Thumb1",
+      "L_Thumb2",
+      "L_Thumb3",
+      "R_Index1",
+      "R_Index2",
+      "R_Index3",
+      "R_Middle1",
+      "R_Middle2",
+      "R_Middle3",
+      "R_Pinky1",
+      "R_Pinky2",
+      "R_Pinky3",
+      "R_Ring1",
+      "R_Ring2",
+      "R_Ring3",
+      "R_Thumb1",
+      "R_Thumb2",
+      "R_Thumb3"
+    ],
+    "finger_joint_names": [
+      "L_Index1_x",
+      "L_Index1_y",
+      "L_Index1_z",
+      "L_Index2_x",
+      "L_Index2_y",
+      "L_Index2_z",
+      "L_Index3_x",
+      "L_Index3_y",
+      "L_Index3_z",
+      "L_Middle1_x",
+      "L_Middle1_y",
+      "L_Middle1_z",
+      "L_Middle2_x",
+      "L_Middle2_y",
+      "L_Middle2_z",
+      "L_Middle3_x",
+      "L_Middle3_y",
+      "L_Middle3_z",
+      "L_Pinky1_x",
+      "L_Pinky1_y",
+      "L_Pinky1_z",
+      "L_Pinky2_x",
+      "L_Pinky2_y",
+      "L_Pinky2_z",
+      "L_Pinky3_x",
+      "L_Pinky3_y",
+      "L_Pinky3_z",
+      "L_Ring1_x",
+      "L_Ring1_y",
+      "L_Ring1_z",
+      "L_Ring2_x",
+      "L_Ring2_y",
+      "L_Ring2_z",
+      "L_Ring3_x",
+      "L_Ring3_y",
+      "L_Ring3_z",
+      "L_Thumb1_x",
+      "L_Thumb1_y",
+      "L_Thumb1_z",
+      "L_Thumb2_x",
+      "L_Thumb2_y",
+      "L_Thumb2_z",
+      "L_Thumb3_x",
+      "L_Thumb3_y",
+      "L_Thumb3_z",
+      "R_Index1_x",
+      "R_Index1_y",
+      "R_Index1_z",
+      "R_Index2_x",
+      "R_Index2_y",
+      "R_Index2_z",
+      "R_Index3_x",
+      "R_Index3_y",
+      "R_Index3_z",
+      "R_Middle1_x",
+      "R_Middle1_y",
+      "R_Middle1_z",
+      "R_Middle2_x",
+      "R_Middle2_y",
+      "R_Middle2_z",
+      "R_Middle3_x",
+      "R_Middle3_y",
+      "R_Middle3_z",
+      "R_Pinky1_x",
+      "R_Pinky1_y",
+      "R_Pinky1_z",
+      "R_Pinky2_x",
+      "R_Pinky2_y",
+      "R_Pinky2_z",
+      "R_Pinky3_x",
+      "R_Pinky3_y",
+      "R_Pinky3_z",
+      "R_Ring1_x",
+      "R_Ring1_y",
+      "R_Ring1_z",
+      "R_Ring2_x",
+      "R_Ring2_y",
+      "R_Ring2_z",
+      "R_Ring3_x",
+      "R_Ring3_y",
+      "R_Ring3_z",
+      "R_Thumb1_x",
+      "R_Thumb1_y",
+      "R_Thumb1_z",
+      "R_Thumb2_x",
+      "R_Thumb2_y",
+      "R_Thumb2_z",
+      "R_Thumb3_x",
+      "R_Thumb3_y",
+      "R_Thumb3_z"
+    ]
+  },
+  "removed_body_names": [],
+  "removed_joint_names": [],
+  "body_records": [
+    {
+      "name": "Pelvis",
+      "parent": null,
+      "joint_names": [],
+      "geom_count": 1,
+      "primitive_count": 1
+    },
+    {
+      "name": "L_Hip",
+      "parent": "Pelvis",
+      "joint_names": [
+        "L_Hip_x",
+        "L_Hip_y",
+        "L_Hip_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "L_Knee",
+      "parent": "L_Hip",
+      "joint_names": [
+        "L_Knee_x",
+        "L_Knee_y",
+        "L_Knee_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "L_Ankle",
+      "parent": "L_Knee",
+      "joint_names": [
+        "L_Ankle_x",
+        "L_Ankle_y",
+        "L_Ankle_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 1
+    },
+    {
+      "name": "L_Toe",
+      "parent": "L_Ankle",
+      "joint_names": [
+        "L_Toe_x",
+        "L_Toe_y",
+        "L_Toe_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 1
+    },
+    {
+      "name": "R_Hip",
+      "parent": "Pelvis",
+      "joint_names": [
+        "R_Hip_x",
+        "R_Hip_y",
+        "R_Hip_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "R_Knee",
+      "parent": "R_Hip",
+      "joint_names": [
+        "R_Knee_x",
+        "R_Knee_y",
+        "R_Knee_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "R_Ankle",
+      "parent": "R_Knee",
+      "joint_names": [
+        "R_Ankle_x",
+        "R_Ankle_y",
+        "R_Ankle_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 1
+    },
+    {
+      "name": "R_Toe",
+      "parent": "R_Ankle",
+      "joint_names": [
+        "R_Toe_x",
+        "R_Toe_y",
+        "R_Toe_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 1
+    },
+    {
+      "name": "Torso",
+      "parent": "Pelvis",
+      "joint_names": [
+        "Torso_x",
+        "Torso_y",
+        "Torso_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "Spine",
+      "parent": "Torso",
+      "joint_names": [
+        "Spine_x",
+        "Spine_y",
+        "Spine_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "Chest",
+      "parent": "Spine",
+      "joint_names": [
+        "Chest_x",
+        "Chest_y",
+        "Chest_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "Neck",
+      "parent": "Chest",
+      "joint_names": [
+        "Neck_x",
+        "Neck_y",
+        "Neck_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "Head",
+      "parent": "Neck",
+      "joint_names": [
+        "Head_x",
+        "Head_y",
+        "Head_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 1
+    },
+    {
+      "name": "L_Thorax",
+      "parent": "Chest",
+      "joint_names": [
+        "L_Thorax_x",
+        "L_Thorax_y",
+        "L_Thorax_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "L_Shoulder",
+      "parent": "L_Thorax",
+      "joint_names": [
+        "L_Shoulder_x",
+        "L_Shoulder_y",
+        "L_Shoulder_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "L_Elbow",
+      "parent": "L_Shoulder",
+      "joint_names": [
+        "L_Elbow_x",
+        "L_Elbow_y",
+        "L_Elbow_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "L_Wrist",
+      "parent": "L_Elbow",
+      "joint_names": [
+        "L_Wrist_x",
+        "L_Wrist_y",
+        "L_Wrist_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 1
+    },
+    {
+      "name": "L_Index1",
+      "parent": "L_Wrist",
+      "joint_names": [
+        "L_Index1_x",
+        "L_Index1_y",
+        "L_Index1_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "L_Index2",
+      "parent": "L_Index1",
+      "joint_names": [
+        "L_Index2_x",
+        "L_Index2_y",
+        "L_Index2_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "L_Index3",
+      "parent": "L_Index2",
+      "joint_names": [
+        "L_Index3_x",
+        "L_Index3_y",
+        "L_Index3_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "L_Middle1",
+      "parent": "L_Wrist",
+      "joint_names": [
+        "L_Middle1_x",
+        "L_Middle1_y",
+        "L_Middle1_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "L_Middle2",
+      "parent": "L_Middle1",
+      "joint_names": [
+        "L_Middle2_x",
+        "L_Middle2_y",
+        "L_Middle2_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "L_Middle3",
+      "parent": "L_Middle2",
+      "joint_names": [
+        "L_Middle3_x",
+        "L_Middle3_y",
+        "L_Middle3_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "L_Pinky1",
+      "parent": "L_Wrist",
+      "joint_names": [
+        "L_Pinky1_x",
+        "L_Pinky1_y",
+        "L_Pinky1_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "L_Pinky2",
+      "parent": "L_Pinky1",
+      "joint_names": [
+        "L_Pinky2_x",
+        "L_Pinky2_y",
+        "L_Pinky2_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "L_Pinky3",
+      "parent": "L_Pinky2",
+      "joint_names": [
+        "L_Pinky3_x",
+        "L_Pinky3_y",
+        "L_Pinky3_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "L_Ring1",
+      "parent": "L_Wrist",
+      "joint_names": [
+        "L_Ring1_x",
+        "L_Ring1_y",
+        "L_Ring1_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "L_Ring2",
+      "parent": "L_Ring1",
+      "joint_names": [
+        "L_Ring2_x",
+        "L_Ring2_y",
+        "L_Ring2_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "L_Ring3",
+      "parent": "L_Ring2",
+      "joint_names": [
+        "L_Ring3_x",
+        "L_Ring3_y",
+        "L_Ring3_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "L_Thumb1",
+      "parent": "L_Wrist",
+      "joint_names": [
+        "L_Thumb1_x",
+        "L_Thumb1_y",
+        "L_Thumb1_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "L_Thumb2",
+      "parent": "L_Thumb1",
+      "joint_names": [
+        "L_Thumb2_x",
+        "L_Thumb2_y",
+        "L_Thumb2_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "L_Thumb3",
+      "parent": "L_Thumb2",
+      "joint_names": [
+        "L_Thumb3_x",
+        "L_Thumb3_y",
+        "L_Thumb3_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "R_Thorax",
+      "parent": "Chest",
+      "joint_names": [
+        "R_Thorax_x",
+        "R_Thorax_y",
+        "R_Thorax_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "R_Shoulder",
+      "parent": "R_Thorax",
+      "joint_names": [
+        "R_Shoulder_x",
+        "R_Shoulder_y",
+        "R_Shoulder_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "R_Elbow",
+      "parent": "R_Shoulder",
+      "joint_names": [
+        "R_Elbow_x",
+        "R_Elbow_y",
+        "R_Elbow_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "R_Wrist",
+      "parent": "R_Elbow",
+      "joint_names": [
+        "R_Wrist_x",
+        "R_Wrist_y",
+        "R_Wrist_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 1
+    },
+    {
+      "name": "R_Index1",
+      "parent": "R_Wrist",
+      "joint_names": [
+        "R_Index1_x",
+        "R_Index1_y",
+        "R_Index1_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "R_Index2",
+      "parent": "R_Index1",
+      "joint_names": [
+        "R_Index2_x",
+        "R_Index2_y",
+        "R_Index2_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "R_Index3",
+      "parent": "R_Index2",
+      "joint_names": [
+        "R_Index3_x",
+        "R_Index3_y",
+        "R_Index3_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "R_Middle1",
+      "parent": "R_Wrist",
+      "joint_names": [
+        "R_Middle1_x",
+        "R_Middle1_y",
+        "R_Middle1_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "R_Middle2",
+      "parent": "R_Middle1",
+      "joint_names": [
+        "R_Middle2_x",
+        "R_Middle2_y",
+        "R_Middle2_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "R_Middle3",
+      "parent": "R_Middle2",
+      "joint_names": [
+        "R_Middle3_x",
+        "R_Middle3_y",
+        "R_Middle3_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "R_Pinky1",
+      "parent": "R_Wrist",
+      "joint_names": [
+        "R_Pinky1_x",
+        "R_Pinky1_y",
+        "R_Pinky1_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "R_Pinky2",
+      "parent": "R_Pinky1",
+      "joint_names": [
+        "R_Pinky2_x",
+        "R_Pinky2_y",
+        "R_Pinky2_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "R_Pinky3",
+      "parent": "R_Pinky2",
+      "joint_names": [
+        "R_Pinky3_x",
+        "R_Pinky3_y",
+        "R_Pinky3_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "R_Ring1",
+      "parent": "R_Wrist",
+      "joint_names": [
+        "R_Ring1_x",
+        "R_Ring1_y",
+        "R_Ring1_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "R_Ring2",
+      "parent": "R_Ring1",
+      "joint_names": [
+        "R_Ring2_x",
+        "R_Ring2_y",
+        "R_Ring2_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "R_Ring3",
+      "parent": "R_Ring2",
+      "joint_names": [
+        "R_Ring3_x",
+        "R_Ring3_y",
+        "R_Ring3_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "R_Thumb1",
+      "parent": "R_Wrist",
+      "joint_names": [
+        "R_Thumb1_x",
+        "R_Thumb1_y",
+        "R_Thumb1_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "R_Thumb2",
+      "parent": "R_Thumb1",
+      "joint_names": [
+        "R_Thumb2_x",
+        "R_Thumb2_y",
+        "R_Thumb2_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    },
+    {
+      "name": "R_Thumb3",
+      "parent": "R_Thumb2",
+      "joint_names": [
+        "R_Thumb3_x",
+        "R_Thumb3_y",
+        "R_Thumb3_z"
+      ],
+      "geom_count": 1,
+      "primitive_count": 3
+    }
+  ],
+  "joint_records": [
+    {
+      "name": "L_Hip_x",
+      "type": "revolute",
+      "parent_link": "Pelvis",
+      "child_link": "L_Hip__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.026,
+        0.0582,
+        -0.0928
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 80.0
+    },
+    {
+      "name": "L_Hip_y",
+      "type": "revolute",
+      "parent_link": "L_Hip__0",
+      "child_link": "L_Hip__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 80.0
+    },
+    {
+      "name": "L_Hip_z",
+      "type": "revolute",
+      "parent_link": "L_Hip__1",
+      "child_link": "L_Hip",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 80.0
+    },
+    {
+      "name": "L_Knee_x",
+      "type": "revolute",
+      "parent_link": "L_Hip",
+      "child_link": "L_Knee__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0094,
+        0.0547,
+        -0.3788
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 80.0
+    },
+    {
+      "name": "L_Knee_y",
+      "type": "revolute",
+      "parent_link": "L_Knee__0",
+      "child_link": "L_Knee__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 80.0
+    },
+    {
+      "name": "L_Knee_z",
+      "type": "revolute",
+      "parent_link": "L_Knee__1",
+      "child_link": "L_Knee",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 80.0
+    },
+    {
+      "name": "L_Ankle_x",
+      "type": "revolute",
+      "parent_link": "L_Knee",
+      "child_link": "L_Ankle__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0319,
+        -0.0435,
+        -0.4031
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 80.0
+    },
+    {
+      "name": "L_Ankle_y",
+      "type": "revolute",
+      "parent_link": "L_Ankle__0",
+      "child_link": "L_Ankle__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 80.0
+    },
+    {
+      "name": "L_Ankle_z",
+      "type": "revolute",
+      "parent_link": "L_Ankle__1",
+      "child_link": "L_Ankle",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 80.0
+    },
+    {
+      "name": "L_Toe_x",
+      "type": "revolute",
+      "parent_link": "L_Ankle",
+      "child_link": "L_Toe__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.1182,
+        0.0473,
+        -0.058
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "L_Toe_y",
+      "type": "revolute",
+      "parent_link": "L_Toe__0",
+      "child_link": "L_Toe__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "L_Toe_z",
+      "type": "revolute",
+      "parent_link": "L_Toe__1",
+      "child_link": "L_Toe",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "R_Hip_x",
+      "type": "revolute",
+      "parent_link": "Pelvis",
+      "child_link": "R_Hip__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0213,
+        -0.0633,
+        -0.1039
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 80.0
+    },
+    {
+      "name": "R_Hip_y",
+      "type": "revolute",
+      "parent_link": "R_Hip__0",
+      "child_link": "R_Hip__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 80.0
+    },
+    {
+      "name": "R_Hip_z",
+      "type": "revolute",
+      "parent_link": "R_Hip__1",
+      "child_link": "R_Hip",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 80.0
+    },
+    {
+      "name": "R_Knee_x",
+      "type": "revolute",
+      "parent_link": "R_Hip",
+      "child_link": "R_Knee__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0168,
+        -0.0442,
+        -0.3624
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 80.0
+    },
+    {
+      "name": "R_Knee_y",
+      "type": "revolute",
+      "parent_link": "R_Knee__0",
+      "child_link": "R_Knee__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 80.0
+    },
+    {
+      "name": "R_Knee_z",
+      "type": "revolute",
+      "parent_link": "R_Knee__1",
+      "child_link": "R_Knee",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 80.0
+    },
+    {
+      "name": "R_Ankle_x",
+      "type": "revolute",
+      "parent_link": "R_Knee",
+      "child_link": "R_Ankle__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0202,
+        0.0154,
+        -0.4107
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 80.0
+    },
+    {
+      "name": "R_Ankle_y",
+      "type": "revolute",
+      "parent_link": "R_Ankle__0",
+      "child_link": "R_Ankle__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 80.0
+    },
+    {
+      "name": "R_Ankle_z",
+      "type": "revolute",
+      "parent_link": "R_Ankle__1",
+      "child_link": "R_Ankle",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 80.0
+    },
+    {
+      "name": "R_Toe_x",
+      "type": "revolute",
+      "parent_link": "R_Ankle",
+      "child_link": "R_Toe__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.119,
+        -0.0388,
+        -0.0583
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "R_Toe_y",
+      "type": "revolute",
+      "parent_link": "R_Toe__0",
+      "child_link": "R_Toe__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "R_Toe_z",
+      "type": "revolute",
+      "parent_link": "R_Toe__1",
+      "child_link": "R_Toe",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "Torso_x",
+      "type": "revolute",
+      "parent_link": "Pelvis",
+      "child_link": "Torso__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0276,
+        -0.0028,
+        0.1099
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 100.0
+    },
+    {
+      "name": "Torso_y",
+      "type": "revolute",
+      "parent_link": "Torso__0",
+      "child_link": "Torso__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 100.0
+    },
+    {
+      "name": "Torso_z",
+      "type": "revolute",
+      "parent_link": "Torso__1",
+      "child_link": "Torso",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 100.0
+    },
+    {
+      "name": "Spine_x",
+      "type": "revolute",
+      "parent_link": "Torso",
+      "child_link": "Spine__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0059,
+        0.0094,
+        0.1319
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 100.0
+    },
+    {
+      "name": "Spine_y",
+      "type": "revolute",
+      "parent_link": "Spine__0",
+      "child_link": "Spine__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 100.0
+    },
+    {
+      "name": "Spine_z",
+      "type": "revolute",
+      "parent_link": "Spine__1",
+      "child_link": "Spine",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 100.0
+    },
+    {
+      "name": "Chest_x",
+      "type": "revolute",
+      "parent_link": "Spine",
+      "child_link": "Chest__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0284,
+        -0.0113,
+        0.0522
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 100.0
+    },
+    {
+      "name": "Chest_y",
+      "type": "revolute",
+      "parent_link": "Chest__0",
+      "child_link": "Chest__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 100.0
+    },
+    {
+      "name": "Chest_z",
+      "type": "revolute",
+      "parent_link": "Chest__1",
+      "child_link": "Chest",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 100.0
+    },
+    {
+      "name": "Neck_x",
+      "type": "revolute",
+      "parent_link": "Chest",
+      "child_link": "Neck__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0316,
+        -0.0122,
+        0.1652
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "Neck_y",
+      "type": "revolute",
+      "parent_link": "Neck__0",
+      "child_link": "Neck__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "Neck_z",
+      "type": "revolute",
+      "parent_link": "Neck__1",
+      "child_link": "Neck",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "Head_x",
+      "type": "revolute",
+      "parent_link": "Neck",
+      "child_link": "Head__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0207,
+        0.0248,
+        0.1605
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "Head_y",
+      "type": "revolute",
+      "parent_link": "Head__0",
+      "child_link": "Head__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "Head_z",
+      "type": "revolute",
+      "parent_link": "Head__1",
+      "child_link": "Head",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "L_Thorax_x",
+      "type": "revolute",
+      "parent_link": "Chest",
+      "child_link": "L_Thorax__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0072,
+        0.0464,
+        0.0849
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "L_Thorax_y",
+      "type": "revolute",
+      "parent_link": "L_Thorax__0",
+      "child_link": "L_Thorax__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "L_Thorax_z",
+      "type": "revolute",
+      "parent_link": "L_Thorax__1",
+      "child_link": "L_Thorax",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "L_Shoulder_x",
+      "type": "revolute",
+      "parent_link": "L_Thorax",
+      "child_link": "L_Shoulder__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0155,
+        0.1192,
+        0.0577
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "L_Shoulder_y",
+      "type": "revolute",
+      "parent_link": "L_Shoulder__0",
+      "child_link": "L_Shoulder__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "L_Shoulder_z",
+      "type": "revolute",
+      "parent_link": "L_Shoulder__1",
+      "child_link": "L_Shoulder",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "L_Elbow_x",
+      "type": "revolute",
+      "parent_link": "L_Shoulder",
+      "child_link": "L_Elbow__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0425,
+        0.2541,
+        -0.0722
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 300.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "L_Elbow_y",
+      "type": "revolute",
+      "parent_link": "L_Elbow__0",
+      "child_link": "L_Elbow__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 300.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "L_Elbow_z",
+      "type": "revolute",
+      "parent_link": "L_Elbow__1",
+      "child_link": "L_Elbow",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 300.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "L_Wrist_x",
+      "type": "revolute",
+      "parent_link": "L_Elbow",
+      "child_link": "L_Wrist__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0025,
+        0.252,
+        0.0232
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 300.0,
+        "velocity": 100.0
+      },
+      "damping": 30.0
+    },
+    {
+      "name": "L_Wrist_y",
+      "type": "revolute",
+      "parent_link": "L_Wrist__0",
+      "child_link": "L_Wrist__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 300.0,
+        "velocity": 100.0
+      },
+      "damping": 30.0
+    },
+    {
+      "name": "L_Wrist_z",
+      "type": "revolute",
+      "parent_link": "L_Wrist__1",
+      "child_link": "L_Wrist",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 300.0,
+        "velocity": 100.0
+      },
+      "damping": 30.0
+    },
+    {
+      "name": "L_Index1_x",
+      "type": "revolute",
+      "parent_link": "L_Wrist",
+      "child_link": "L_Index1__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0194,
+        0.1019,
+        -0.0087
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -1.5707963267948966,
+        "upper": 0.3490658503988659,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Index1_y",
+      "type": "revolute",
+      "parent_link": "L_Index1__0",
+      "child_link": "L_Index1__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Index1_z",
+      "type": "revolute",
+      "parent_link": "L_Index1__1",
+      "child_link": "L_Index1",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.3490658503988659,
+        "upper": 0.3490658503988659,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Index2_x",
+      "type": "revolute",
+      "parent_link": "L_Index1",
+      "child_link": "L_Index2__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.003,
+        0.0319,
+        0.0022
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -1.7453292519943295,
+        "upper": 0.0,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Index2_y",
+      "type": "revolute",
+      "parent_link": "L_Index2__0",
+      "child_link": "L_Index2__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Index2_z",
+      "type": "revolute",
+      "parent_link": "L_Index2__1",
+      "child_link": "L_Index2",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Index3_x",
+      "type": "revolute",
+      "parent_link": "L_Index2",
+      "child_link": "L_Index3__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0001,
+        0.0225,
+        -0.0024
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -1.3962634015954636,
+        "upper": 0.0,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Index3_y",
+      "type": "revolute",
+      "parent_link": "L_Index3__0",
+      "child_link": "L_Index3__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Index3_z",
+      "type": "revolute",
+      "parent_link": "L_Index3__1",
+      "child_link": "L_Index3",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Middle1_x",
+      "type": "revolute",
+      "parent_link": "L_Wrist",
+      "child_link": "L_Middle1__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.004,
+        0.1094,
+        -0.0063
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -1.5707963267948966,
+        "upper": 0.3490658503988659,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Middle1_y",
+      "type": "revolute",
+      "parent_link": "L_Middle1__0",
+      "child_link": "L_Middle1__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Middle1_z",
+      "type": "revolute",
+      "parent_link": "L_Middle1__1",
+      "child_link": "L_Middle1",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.3490658503988659,
+        "upper": 0.3490658503988659,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Middle2_x",
+      "type": "revolute",
+      "parent_link": "L_Middle1",
+      "child_link": "L_Middle2__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.004,
+        0.0306,
+        0.0008
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -1.7453292519943295,
+        "upper": 0.0,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Middle2_y",
+      "type": "revolute",
+      "parent_link": "L_Middle2__0",
+      "child_link": "L_Middle2__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Middle2_z",
+      "type": "revolute",
+      "parent_link": "L_Middle2__1",
+      "child_link": "L_Middle2",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Middle3_x",
+      "type": "revolute",
+      "parent_link": "L_Middle2",
+      "child_link": "L_Middle3__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0041,
+        0.0235,
+        -0.002
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -1.3962634015954636,
+        "upper": 0.0,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Middle3_y",
+      "type": "revolute",
+      "parent_link": "L_Middle3__0",
+      "child_link": "L_Middle3__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Middle3_z",
+      "type": "revolute",
+      "parent_link": "L_Middle3__1",
+      "child_link": "L_Middle3",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Pinky1_x",
+      "type": "revolute",
+      "parent_link": "L_Wrist",
+      "child_link": "L_Pinky1__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0437,
+        0.084,
+        -0.0145
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -1.5707963267948966,
+        "upper": 0.3490658503988659,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Pinky1_y",
+      "type": "revolute",
+      "parent_link": "L_Pinky1__0",
+      "child_link": "L_Pinky1__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Pinky1_z",
+      "type": "revolute",
+      "parent_link": "L_Pinky1__1",
+      "child_link": "L_Pinky1",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.3490658503988659,
+        "upper": 0.3490658503988659,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Pinky2_x",
+      "type": "revolute",
+      "parent_link": "L_Pinky1",
+      "child_link": "L_Pinky2__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.012,
+        0.0155,
+        -0.0011
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -1.7453292519943295,
+        "upper": 0.0,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Pinky2_y",
+      "type": "revolute",
+      "parent_link": "L_Pinky2__0",
+      "child_link": "L_Pinky2__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Pinky2_z",
+      "type": "revolute",
+      "parent_link": "L_Pinky2__1",
+      "child_link": "L_Pinky2",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Pinky3_x",
+      "type": "revolute",
+      "parent_link": "L_Pinky2",
+      "child_link": "L_Pinky3__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0112,
+        0.0155,
+        -0.0017
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -1.3962634015954636,
+        "upper": 0.0,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Pinky3_y",
+      "type": "revolute",
+      "parent_link": "L_Pinky3__0",
+      "child_link": "L_Pinky3__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Pinky3_z",
+      "type": "revolute",
+      "parent_link": "L_Pinky3__1",
+      "child_link": "L_Pinky3",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Ring1_x",
+      "type": "revolute",
+      "parent_link": "L_Wrist",
+      "child_link": "L_Ring1__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0273,
+        0.0974,
+        -0.0093
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -1.5707963267948966,
+        "upper": 0.3490658503988659,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Ring1_y",
+      "type": "revolute",
+      "parent_link": "L_Ring1__0",
+      "child_link": "L_Ring1__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Ring1_z",
+      "type": "revolute",
+      "parent_link": "L_Ring1__1",
+      "child_link": "L_Ring1",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.3490658503988659,
+        "upper": 0.3490658503988659,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Ring2_x",
+      "type": "revolute",
+      "parent_link": "L_Ring1",
+      "child_link": "L_Ring2__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0053,
+        0.028,
+        0.0015
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -1.7453292519943295,
+        "upper": 0.0,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Ring2_y",
+      "type": "revolute",
+      "parent_link": "L_Ring2__0",
+      "child_link": "L_Ring2__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Ring2_z",
+      "type": "revolute",
+      "parent_link": "L_Ring2__1",
+      "child_link": "L_Ring2",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Ring3_x",
+      "type": "revolute",
+      "parent_link": "L_Ring2",
+      "child_link": "L_Ring3__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0071,
+        0.0228,
+        -0.0015
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -1.3962634015954636,
+        "upper": 0.0,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Ring3_y",
+      "type": "revolute",
+      "parent_link": "L_Ring3__0",
+      "child_link": "L_Ring3__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Ring3_z",
+      "type": "revolute",
+      "parent_link": "L_Ring3__1",
+      "child_link": "L_Ring3",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Thumb1_x",
+      "type": "revolute",
+      "parent_link": "L_Wrist",
+      "child_link": "L_Thumb1__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0256,
+        0.0406,
+        -0.018
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.7853981633974483,
+        "upper": 0.7853981633974483,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Thumb1_y",
+      "type": "revolute",
+      "parent_link": "L_Thumb1__0",
+      "child_link": "L_Thumb1__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.7853981633974483,
+        "upper": 2.2689280275926285,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Thumb1_z",
+      "type": "revolute",
+      "parent_link": "L_Thumb1__1",
+      "child_link": "L_Thumb1",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.5235987755982988,
+        "upper": 1.2217304763960306,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Thumb2_x",
+      "type": "revolute",
+      "parent_link": "L_Thumb1",
+      "child_link": "L_Thumb2__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.025,
+        0.017,
+        0.001
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Thumb2_y",
+      "type": "revolute",
+      "parent_link": "L_Thumb2__0",
+      "child_link": "L_Thumb2__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Thumb2_z",
+      "type": "revolute",
+      "parent_link": "L_Thumb2__1",
+      "child_link": "L_Thumb2",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.3490658503988659,
+        "upper": 0.9599310885968813,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Thumb3_x",
+      "type": "revolute",
+      "parent_link": "L_Thumb2",
+      "child_link": "L_Thumb3__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0155,
+        0.0205,
+        -0.0052
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Thumb3_y",
+      "type": "revolute",
+      "parent_link": "L_Thumb3__0",
+      "child_link": "L_Thumb3__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "L_Thumb3_z",
+      "type": "revolute",
+      "parent_link": "L_Thumb3__1",
+      "child_link": "L_Thumb3",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.2617993877991494,
+        "upper": 1.3962634015954636,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Thorax_x",
+      "type": "revolute",
+      "parent_link": "Chest",
+      "child_link": "R_Thorax__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0134,
+        -0.0477,
+        0.0843
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "R_Thorax_y",
+      "type": "revolute",
+      "parent_link": "R_Thorax__0",
+      "child_link": "R_Thorax__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "R_Thorax_z",
+      "type": "revolute",
+      "parent_link": "R_Thorax__1",
+      "child_link": "R_Thorax",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "R_Shoulder_x",
+      "type": "revolute",
+      "parent_link": "R_Thorax",
+      "child_link": "R_Shoulder__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0127,
+        -0.1026,
+        0.0535
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "R_Shoulder_y",
+      "type": "revolute",
+      "parent_link": "R_Shoulder__0",
+      "child_link": "R_Shoulder__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "R_Shoulder_z",
+      "type": "revolute",
+      "parent_link": "R_Shoulder__1",
+      "child_link": "R_Shoulder",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 500.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "R_Elbow_x",
+      "type": "revolute",
+      "parent_link": "R_Shoulder",
+      "child_link": "R_Elbow__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0265,
+        -0.2711,
+        -0.0365
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 300.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "R_Elbow_y",
+      "type": "revolute",
+      "parent_link": "R_Elbow__0",
+      "child_link": "R_Elbow__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 300.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "R_Elbow_z",
+      "type": "revolute",
+      "parent_link": "R_Elbow__1",
+      "child_link": "R_Elbow",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 300.0,
+        "velocity": 100.0
+      },
+      "damping": 50.0
+    },
+    {
+      "name": "R_Wrist_x",
+      "type": "revolute",
+      "parent_link": "R_Elbow",
+      "child_link": "R_Wrist__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0153,
+        -0.2493,
+        -0.0045
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 300.0,
+        "velocity": 100.0
+      },
+      "damping": 30.0
+    },
+    {
+      "name": "R_Wrist_y",
+      "type": "revolute",
+      "parent_link": "R_Wrist__0",
+      "child_link": "R_Wrist__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 300.0,
+        "velocity": 100.0
+      },
+      "damping": 30.0
+    },
+    {
+      "name": "R_Wrist_z",
+      "type": "revolute",
+      "parent_link": "R_Wrist__1",
+      "child_link": "R_Wrist",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "effort": 300.0,
+        "velocity": 100.0
+      },
+      "damping": 30.0
+    },
+    {
+      "name": "R_Index1_x",
+      "type": "revolute",
+      "parent_link": "R_Wrist",
+      "child_link": "R_Index1__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0196,
+        -0.0999,
+        -0.0118
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.3490658503988659,
+        "upper": 1.5707963267948966,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Index1_y",
+      "type": "revolute",
+      "parent_link": "R_Index1__0",
+      "child_link": "R_Index1__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Index1_z",
+      "type": "revolute",
+      "parent_link": "R_Index1__1",
+      "child_link": "R_Index1",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.3490658503988659,
+        "upper": 0.3490658503988659,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Index2_x",
+      "type": "revolute",
+      "parent_link": "R_Index1",
+      "child_link": "R_Index2__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.003,
+        -0.0319,
+        0.0022
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": 0.0,
+        "upper": 1.7453292519943295,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Index2_y",
+      "type": "revolute",
+      "parent_link": "R_Index2__0",
+      "child_link": "R_Index2__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Index2_z",
+      "type": "revolute",
+      "parent_link": "R_Index2__1",
+      "child_link": "R_Index2",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Index3_x",
+      "type": "revolute",
+      "parent_link": "R_Index2",
+      "child_link": "R_Index3__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0001,
+        -0.0225,
+        -0.0023
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": 0.0,
+        "upper": 1.3962634015954636,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Index3_y",
+      "type": "revolute",
+      "parent_link": "R_Index3__0",
+      "child_link": "R_Index3__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Index3_z",
+      "type": "revolute",
+      "parent_link": "R_Index3__1",
+      "child_link": "R_Index3",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Middle1_x",
+      "type": "revolute",
+      "parent_link": "R_Wrist",
+      "child_link": "R_Middle1__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0037,
+        -0.1074,
+        -0.0094
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.3490658503988659,
+        "upper": 1.5707963267948966,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Middle1_y",
+      "type": "revolute",
+      "parent_link": "R_Middle1__0",
+      "child_link": "R_Middle1__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Middle1_z",
+      "type": "revolute",
+      "parent_link": "R_Middle1__1",
+      "child_link": "R_Middle1",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.3490658503988659,
+        "upper": 0.3490658503988659,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Middle2_x",
+      "type": "revolute",
+      "parent_link": "R_Middle1",
+      "child_link": "R_Middle2__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.004,
+        -0.0306,
+        0.0008
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": 0.0,
+        "upper": 1.7453292519943295,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Middle2_y",
+      "type": "revolute",
+      "parent_link": "R_Middle2__0",
+      "child_link": "R_Middle2__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Middle2_z",
+      "type": "revolute",
+      "parent_link": "R_Middle2__1",
+      "child_link": "R_Middle2",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Middle3_x",
+      "type": "revolute",
+      "parent_link": "R_Middle2",
+      "child_link": "R_Middle3__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0041,
+        -0.0235,
+        -0.002
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": 0.0,
+        "upper": 1.3962634015954636,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Middle3_y",
+      "type": "revolute",
+      "parent_link": "R_Middle3__0",
+      "child_link": "R_Middle3__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Middle3_z",
+      "type": "revolute",
+      "parent_link": "R_Middle3__1",
+      "child_link": "R_Middle3",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Pinky1_x",
+      "type": "revolute",
+      "parent_link": "R_Wrist",
+      "child_link": "R_Pinky1__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0435,
+        -0.082,
+        -0.0176
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.3490658503988659,
+        "upper": 1.5707963267948966,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Pinky1_y",
+      "type": "revolute",
+      "parent_link": "R_Pinky1__0",
+      "child_link": "R_Pinky1__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Pinky1_z",
+      "type": "revolute",
+      "parent_link": "R_Pinky1__1",
+      "child_link": "R_Pinky1",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.3490658503988659,
+        "upper": 0.3490658503988659,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Pinky2_x",
+      "type": "revolute",
+      "parent_link": "R_Pinky1",
+      "child_link": "R_Pinky2__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.012,
+        -0.0155,
+        -0.0011
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": 0.0,
+        "upper": 1.7453292519943295,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Pinky2_y",
+      "type": "revolute",
+      "parent_link": "R_Pinky2__0",
+      "child_link": "R_Pinky2__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Pinky2_z",
+      "type": "revolute",
+      "parent_link": "R_Pinky2__1",
+      "child_link": "R_Pinky2",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Pinky3_x",
+      "type": "revolute",
+      "parent_link": "R_Pinky2",
+      "child_link": "R_Pinky3__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0112,
+        -0.0155,
+        -0.0017
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": 0.0,
+        "upper": 1.3962634015954636,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Pinky3_y",
+      "type": "revolute",
+      "parent_link": "R_Pinky3__0",
+      "child_link": "R_Pinky3__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Pinky3_z",
+      "type": "revolute",
+      "parent_link": "R_Pinky3__1",
+      "child_link": "R_Pinky3",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Ring1_x",
+      "type": "revolute",
+      "parent_link": "R_Wrist",
+      "child_link": "R_Ring1__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0271,
+        -0.0954,
+        -0.0124
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.3490658503988659,
+        "upper": 1.5707963267948966,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Ring1_y",
+      "type": "revolute",
+      "parent_link": "R_Ring1__0",
+      "child_link": "R_Ring1__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Ring1_z",
+      "type": "revolute",
+      "parent_link": "R_Ring1__1",
+      "child_link": "R_Ring1",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.3490658503988659,
+        "upper": 0.3490658503988659,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Ring2_x",
+      "type": "revolute",
+      "parent_link": "R_Ring1",
+      "child_link": "R_Ring2__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0053,
+        -0.028,
+        0.0015
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": 0.0,
+        "upper": 1.7453292519943295,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Ring2_y",
+      "type": "revolute",
+      "parent_link": "R_Ring2__0",
+      "child_link": "R_Ring2__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Ring2_z",
+      "type": "revolute",
+      "parent_link": "R_Ring2__1",
+      "child_link": "R_Ring2",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Ring3_x",
+      "type": "revolute",
+      "parent_link": "R_Ring2",
+      "child_link": "R_Ring3__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        -0.0071,
+        -0.0228,
+        -0.0015
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": 0.0,
+        "upper": 1.3962634015954636,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Ring3_y",
+      "type": "revolute",
+      "parent_link": "R_Ring3__0",
+      "child_link": "R_Ring3__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Ring3_z",
+      "type": "revolute",
+      "parent_link": "R_Ring3__1",
+      "child_link": "R_Ring3",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Thumb1_x",
+      "type": "revolute",
+      "parent_link": "R_Wrist",
+      "child_link": "R_Thumb1__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0259,
+        -0.0386,
+        -0.0211
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.7853981633974483,
+        "upper": 0.7853981633974483,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Thumb1_y",
+      "type": "revolute",
+      "parent_link": "R_Thumb1__0",
+      "child_link": "R_Thumb1__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.7853981633974483,
+        "upper": 2.2689280275926285,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Thumb1_z",
+      "type": "revolute",
+      "parent_link": "R_Thumb1__1",
+      "child_link": "R_Thumb1",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -1.2217304763960306,
+        "upper": 0.5235987755982988,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Thumb2_x",
+      "type": "revolute",
+      "parent_link": "R_Thumb1",
+      "child_link": "R_Thumb2__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.025,
+        -0.017,
+        0.001
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Thumb2_y",
+      "type": "revolute",
+      "parent_link": "R_Thumb2__0",
+      "child_link": "R_Thumb2__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Thumb2_z",
+      "type": "revolute",
+      "parent_link": "R_Thumb2__1",
+      "child_link": "R_Thumb2",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.9599310885968813,
+        "upper": 0.3490658503988659,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Thumb3_x",
+      "type": "revolute",
+      "parent_link": "R_Thumb2",
+      "child_link": "R_Thumb3__0",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0155,
+        -0.0205,
+        -0.0052
+      ],
+      "origin_rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Thumb3_y",
+      "type": "revolute",
+      "parent_link": "R_Thumb3__0",
+      "child_link": "R_Thumb3__1",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -0.0017453292519943296,
+        "upper": 0.0017453292519943296,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    },
+    {
+      "name": "R_Thumb3_z",
+      "type": "revolute",
+      "parent_link": "R_Thumb3__1",
+      "child_link": "R_Thumb3",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limit": {
+        "lower": -1.3962634015954636,
+        "upper": 0.2617993877991494,
+        "effort": 10.0,
+        "velocity": 5.0
+      },
+      "damping": 10.0
+    }
+  ]
+}
