@@ -1,0 +1,408 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+
+.publication-title {
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-header .hero-body {
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+    color: white !important;
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+
+.publication-banner img {
+}
+
+.publication-authors {
+  /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+
+.interpolation-panel {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.interpolation-panel .interpolation-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.interpolation-video-column {
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+#interpolation-image-wrapper {
+  width: 100%;
+}
+#interpolation-image-wrapper img {
+  border-radius: 5px;
+}
+
+/* head */
+.head-section {
+  padding-bottom: 1.5em;
+}
+
+.publisher {
+  font-size: 1.1em;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.author-block a {
+  color: white !important;
+}
+
+.author-block a:hover {
+  color: #FFA800 !important;
+  text-decoration: underline;
+}
+
+.eql-cntrb {
+  font-size: smaller;
+}
+
+.link-block {
+  margin-top: 1em;
+}
+
+
+/* content */
+.content-section {
+  padding-top: 0em;
+  padding-bottom: 1.5em;
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  overflow: hidden;
+  margin: 0 2em;
+  padding-bottom: 2em;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+.slider-pagination .slider-page {
+  background: #000000;
+}
+
+.bibtex-block pre code {
+  white-space: pre-wrap;
+}
+
+
+.footer span {
+  font-size: 0.9em;
+  color: #000;
+}
+
+.bal-block {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: stretch;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+/* Before After Container */
+.bal-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bal-after {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.bal-before {
+  display: block;
+  position: absolute;
+  top: 0;
+  /* right: 0; */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+  overflow: hidden;
+}
+
+.bal-before-inset {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.bal-after img,
+.bal-before img {
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-position: 50% 50%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.bal-handle {
+  height: 41px;
+  width: 41px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -20px;
+  margin-top: -21px;
+  border: 2px solid #fff;
+  border-radius: 1000px;
+  z-index: 20;
+  pointer-events: none;
+  box-shadow: 0 0 10px rgb(12, 12, 12);
+}
+
+.handle-left-arrow,
+.handle-right-arrow {
+  width: 0;
+  height: 0;
+  border: 6px inset transparent;
+  position: absolute;
+  top: 50%;
+  margin-top: -6px;
+}
+
+.handle-left-arrow {
+  border-right: 6px solid #fff;
+  left: 50%;
+  margin-left: -17px;
+}
+
+.handle-right-arrow {
+  border-left: 6px solid #fff;
+  right: 50%;
+  margin-right: -17px;
+}
+
+.bal-handle::before {
+  bottom: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgb(12, 12, 12);
+}
+
+.bal-handle::after {
+  top: 50%;
+  margin-top: 20.5px;
+  box-shadow: 0 0 5px rgb(12, 12, 12);
+}
+
+.bal-handle::before,
+.bal-handle::after {
+  content: " ";
+  display: block;
+  width: 2px;
+  background: #fff;
+  height: 9999px;
+  position: absolute;
+  left: 50%;
+  margin-left: -1.5px;
+}
+
+.optimal-asset {
+  text-align: justify; /* 两端对齐文字 */
+}
+
+.optimal-asset .heading {
+  text-align: center; /* 标题居中 */
+  font-size: 1.0em;   /* 设置较大的字体 */
+}
+
+.optimal-asset .description {
+  text-align: justify; /* 两端对齐段落文字 */
+  font-size: 1em; /* 正常段落大小 */
+  line-height: 1.6; /* 调整行距增强可读性 */
+}
+
+.gif-gallery {
+  display: grid;             /* 使用 CSS Grid 布局 */
+  grid-template-columns: repeat(4, 1fr); /* 4 列 */
+  grid-gap: 1rem;            /* 每个 GIF 之间的间距 */
+  margin-top: 1rem;
+}
+
+.gif-gallery img {
+  width: 100%;                /* 设置图片宽度为列宽 */
+  height: auto;               /* 等比缩放图片高度 */
+  border-radius: 8px;         /* 可选：圆角效果 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 可选：轻微阴影 */
+}
+
+.gif-gallery-62 {
+  display: flex;
+  flex-direction: column; /* 排成两行 */
+  gap: 10px; /* 每排之间的间隔 */
+  margin-top: 20px; /* 调整与上方内容的距离 */
+}
+
+.gif-row {
+  display: flex;
+  justify-content: space-between; /* 每个 GIF 均匀分布 */
+  gap: 10px; /* GIF 图片之间的间隔 */
+}
+
+.gif-row img {
+  width: 22%; /* 控制每个 GIF 的宽度（大约1/6） */
+  aspect-ratio: 3 / 2; /* 确保图片按比例显示 */
+  object-fit: cover; /* 裁剪方式为覆盖整个容器 */
+  border-radius: 5px; /* 添加圆角效果 */
+}
+
+.title {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.6), 0 0 2px rgba(255, 255, 255, 0.4);*/
+}
+
+

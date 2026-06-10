@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Open-Vocabulary, Physical skill, Interactive agent">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DragMesh-2: Physically Plausible Dexterous Hand-Object Interaction with Articulated Objects</title>
+  <link rel="icon" type="image/x-icon" href="static/images/icon.svg">
+
+   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+  <link rel="stylesheet" href="static/css/custom.css" />
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+<!--  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">-->
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+<!--  <script defer src="static/js/fontawesome.all.min.js"></script>-->
+  <script src="https://kit.fontawesome.com/d383128d10.js" crossorigin="anonymous"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script src="static/js/custom.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.0/examples/js/loaders/GLTFLoader.js"></script>
+
+
+
+
+  <script type="importmap">
+    {
+      "imports": {
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js",
+        "three": "https://unpkg.com/three@0.127.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.127.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KC36P9N5PB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KC36P9N5PB');
+</script>
+
+
+<body>
+
+  <!-- <section class="hero" style="position: relative; overflow: hidden;"> -->
+    <section id="hero-section" class="hero" style="position: relative; overflow: hidden;">
+    <div style="position: relative; width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center; overflow: hidden;">
+
+      <video src="static/video/teaser.mp4" autoplay muted loop playsinline
+             style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; transform: translate(-50%, -50%); z-index: 0; object-fit: cover; opacity: 0.7;"></video>
+
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+                  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)); z-index: 1;"></div>
+  
+      <div style="position: relative; z-index: 2; color: white;">
+            <h1 class="title is-1 has-text-white" style="font-size: 4rem;">
+              DragMesh-2: Physically Plausible Dexterous Hand-Object Interaction with Articulated Objects
+            </h1>
+            <!-- <h2 class="title is-1 has-text-white" style="font-size: 2rem;">Paper 2026</h2> -->
+            <div class="is-size-5 publication-authors" style="">
+              <span class="author-block" style="margin: 0 1rem;">Tianshan Zhang<sup>*</sup></span>
+              <span class="author-block" style="margin: 0 1rem;">Yijia Duan<sup>*</sup></span>
+              <span class="author-block" style="margin: 0 1rem;">Yanjun Li<sup>*</sup></span>
+              <span class="author-block" style="margin: 0 1rem;"><a href="https://steve-zeyu-zhang.github.io/" style="color: inherit; font: inherit;">Zeyu Zhang</a><sup>*†</sup></span>
+              <span class="author-block" style="margin: 0 1rem;">Hao Tang<sup>‡</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors" style="margin-top: 0.3em;">
+              <span class="author-block">School of Computer Science, Peking University</span>
+            </div>
+
+            <div class="is-size-6" style="color: #e9e8e8; margin-top: 0.1em;">
+              <span><sup>*</sup>Equal contribution.</span>
+              <span><sup>†</sup>Project lead.</span>
+              <span><sup>‡</sup>Corresponding author.</span>
+            </div>
+
+            <div class="column has-text-centered" style="margin-top: 1.2rem;">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                 
+                <!-- From Uiverse.io by CristianMontoya98 --> 
+                <a href="https://arxiv.org/abs/">
+                  <button class="btn"> 
+                    <span class="link-block">
+                        <span class="icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                  </button>
+                </a>
+
+                <a href="https://github.com/AIGeeksGroup/DragMesh-2">
+                  <button class="btn"> 
+                    <span class="link-block">
+                        <span class="icon">
+                          <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </button>
+                </a>
+
+                <a href="https://huggingface.co/AIGeeksGroup/DragMesh-2" class="btn-link">
+                  <button class="btn">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Model</span>
+                  </button>
+                </a>
+
+                <a href="https://huggingface.co/datasets/AIGeeksGroup/DragMesh-2">
+                  <button class="btn"> 
+                    <span class="link-block">
+                        <span class="icon">
+                          <i class="far fa-images"></i>
+                      </span>
+                      <span>Data</span>
+                    </button>
+                </a>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+<!-- Paper abstract -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">📋 Abstract</h2>
+          <video src="static/video/supplementary_video.mp4" autoplay muted loop playsinline
+                 style="width: 100%; display: block; margin: 0 auto 1.5rem auto;"></video>
+          <div class="content has-text-justified">
+            <p>
+              Dexterous interaction with articulated objects is important for household, assistive, and humanoid manipulation, where multi-finger hands can provide compliant contact patterns beyond parallel-jaw grasping. However, articulated-object manipulation differs from static-object manipulation: the target part cannot be directly actuated, and its motion must emerge through sustained physical hand--handle contact. This makes the transition from object-centric articulated generation to hand-driven dexterous hand--object interaction non-trivial, since geometric trajectory replay or open-loop execution does not model the contact dynamics required to move the articulated part. Moreover, policies trained only for task completion under fixed dynamics can overfit nominal contact loads, especially without tactile or force feedback, and may degrade when the contact load changes. To address these challenges, we present <strong>DragMesh-2</strong>, a contact-driven framework for dexterous interaction with articulated objects that extends articulated interaction from object-centric generation to hand-driven dexterous hand--object interaction, where articulated motion must arise through physical contact. We further propose <strong>PICA</strong>, a physically informed contact-aware training mechanism that injects physical signals into policy learning without tactile or force feedback, improving robustness and task success under changing contact loads. Finally, we conduct systematic evaluation across multiple damping conditions and articulated-object categories to study robustness under contact-load variation, and provide a pure-geometry dexterous interaction resource to support future loco-manipulation and humanoid hand--object interaction research. Across seven GAPartNet objects, DragMesh-2 achieves stronger robustness under contact-load variation than the compared methods while maintaining high task success across damping conditions.
+              </p>
+            
+          </div>
+        </div>
+      </div>
+
+    <div class="hero-body is-small">
+      <img src="static/images/main.png" alt="Architecture of DragMesh-2" style="width: 100%;">
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<section class="section">
+  <!-- <div class="columns is-centered">
+    <div class="column is-full-width">
+      <h1 class="title is-3 mb-15 has-text-centered">🌠 Samples</h1>
+      <h2 class="title is-4 has-text-centered has-text-weight-bold">
+        Comprehensive 3D Assets (*.usd and *.glb) with Canonical Poses and Semantic Labels
+      </h2>
+      <div class="high-light-card">
+        <p style="text-align: center;">
+          <b>🔎 All 3D CAD models have been carefully annotated manually</b>
+        </p>
+      </div>
+    </div>
+  </div> -->
+
+
+  <div id="simulation-results" class="columns is-centered has-text-centered">
+    <div class="column is-full">
+      <h2 class="title is-3">🎮 Simulation Results</h2>
+      <div style="display: flex; justify-content: center; gap: 0.75rem; margin-top: 1rem;">
+        <button class="button sim-speed-button" data-speed="1">x1</button>
+        <button class="button sim-speed-button" data-speed="2">x2</button>
+        <button class="button sim-speed-button is-dark" data-speed="4">x4</button>
+      </div>
+      <div class="container is-max-desktop" style="margin-top: 1.5rem;">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; align-items: start;">
+          <div style="font-weight: 700;">GRU</div>
+          <div style="font-weight: 700;">Transformer</div>
+          <div style="font-weight: 700; color: red;">Ours</div>
+
+          <video src="static/video/simulation/GRU/×4/12583_x4.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video src="static/video/simulation/Transformer/×4/12583_x4.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video src="static/video/simulation/ours/×4/12583_h1_x4.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+
+          <video src="static/video/simulation/GRU/×4/45261_x4.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video src="static/video/simulation/Transformer/×4/45261_x4.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video src="static/video/simulation/ours/×4/45261_h7_x4.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+
+          <video src="static/video/simulation/GRU/×4/45661_x4.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video src="static/video/simulation/Transformer/×4/45661_x4.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video src="static/video/simulation/ours/×4/45661_h3_x4.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+
+          <video src="static/video/simulation/GRU/×4/45936_x4.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video src="static/video/simulation/Transformer/×4/45936_x4.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video src="static/video/simulation/ours/×4/45936_h1_x4.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+
+          <video src="static/video/simulation/GRU/×4/46440_x4.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video src="static/video/simulation/Transformer/×4/46440_x4.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video src="static/video/simulation/ours/×4/46440_h5_x4.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+
+          <video src="static/video/simulation/GRU/×4/48513_x4.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video src="static/video/simulation/Transformer/×4/48513_x4.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video src="static/video/simulation/ours/×4/48513_h2_x4.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+
+          <video src="static/video/simulation/GRU/×4/7310_x4.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video src="static/video/simulation/Transformer/×4/7310_x4.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video src="static/video/simulation/ours/×4/7310_h1_x4.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</section>
+
+
+<section class="section">
+  <!-- <div class="columns is-centered">
+    <div class="column is-full-width">
+      <h1 class="title is-3 mb-15 has-text-centered">🌠 Samples</h1>
+      <h2 class="title is-4 has-text-centered has-text-weight-bold">
+        Comprehensive 3D Assets (*.usd and *.glb) with Canonical Poses and Semantic Labels
+      </h2>
+      <div class="high-light-card">
+        <p style="text-align: center;">
+          <b>🔎 All 3D CAD models have been carefully annotated manually</b>
+        </p>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-full">
+      <h2 class="title is-3">🏘️ Real World Results</h2>
+      <div class="container is-max-desktop" style="margin-top: 1.5rem;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+          <video src="static/video/Real-world/Prismatic_Objects.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video src="static/video/Real-world/Revolute_Objects.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</section>
+
+
+<section class="section">
+  <!-- <div class="columns is-centered">
+    <div class="column is-full-width">
+      <h1 class="title is-3 mb-15 has-text-centered">🌠 Samples</h1>
+      <h2 class="title is-4 has-text-centered has-text-weight-bold">
+        Comprehensive 3D Assets (*.usd and *.glb) with Canonical Poses and Semantic Labels
+      </h2>
+      <div class="high-light-card">
+        <p style="text-align: center;">
+          <b>🔎 All 3D CAD models have been carefully annotated manually</b>
+        </p>
+      </div>
+    </div>
+  </div> -->
+
+
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-full">
+      <h2 class="title is-3">🌠 Dataset Samples</h2>
+      <div class="container is-max-desktop" style="margin-top: 1.5rem;">
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;">
+          <video class="dataset-video" preload="auto" src="static/video/simulation/dataset/102996_h1.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video class="dataset-video" preload="auto" src="static/video/simulation/dataset/12480_h1.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video class="dataset-video" preload="auto" src="static/video/simulation/dataset/12583_h1.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video class="dataset-video" preload="auto" src="static/video/simulation/dataset/40147_h3.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+
+          <video class="dataset-video" preload="auto" src="static/video/simulation/dataset/44962_h5.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video class="dataset-video" preload="auto" src="static/video/simulation/dataset/45146_h2.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video class="dataset-video" preload="auto" src="static/video/simulation/dataset/45168_h2.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video class="dataset-video" preload="auto" src="static/video/simulation/dataset/45261_h7.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+
+          <video class="dataset-video" preload="auto" src="static/video/simulation/dataset/45661_h3.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video class="dataset-video" preload="auto" src="static/video/simulation/dataset/45936_h1.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video class="dataset-video" preload="auto" src="static/video/simulation/dataset/46440_h5.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video class="dataset-video" preload="auto" src="static/video/simulation/dataset/46490_h2.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+
+          <video class="dataset-video" preload="auto" src="static/video/simulation/dataset/47565_h3.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video class="dataset-video" preload="auto" src="static/video/simulation/dataset/48513_h2.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video class="dataset-video" preload="auto" src="static/video/simulation/dataset/48740_h5.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+          <video class="dataset-video" preload="auto" src="static/video/simulation/dataset/7310_h1.mp4" autoplay muted loop playsinline style="width: 100%; display: block;"></video>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</section>
+
+
+
+
+
+<!--BibTex citation -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="has-text-centered">
+      <h2 class="title is-3">BibTeX</h2>
+    </div>
+    <pre><code>@inproceedings{DragMesh2,
+  title={DragMesh-2: Physically Plausible Dexterous Hand-Object Interaction with Articulated Objects},
+  author={Zhang, Tianshan and Duan, Yijia and Li, Yanjun and Zhang, Zeyu and Tang, Hao},
+  year={2026},
+  booktitle={arXiv},
+}</code></pre>
+  </div>
+</section>
+<!--End BibTex citation -->
+
+
+<footer class="footer" style="padding: 1.5rem 1.5rem;">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p style="margin: 0;">
+            DragMesh-2: Physically Plausible Dexterous Hand-Object Interaction with Articulated Objects
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  function playDatasetVideos() {
+    document.querySelectorAll('.dataset-video').forEach((video) => {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.loop = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      video.playbackRate = 3;
+      video.play().catch(() => {});
+    });
+  }
+
+  document.querySelectorAll('.dataset-video').forEach((video) => {
+    video.addEventListener('canplay', playDatasetVideos);
+    video.addEventListener('loadeddata', playDatasetVideos);
+  });
+  document.addEventListener('DOMContentLoaded', playDatasetVideos);
+  window.addEventListener('load', playDatasetVideos);
+  window.addEventListener('scroll', playDatasetVideos, { once: true });
+
+  document.querySelectorAll('.sim-speed-button').forEach((button) => {
+    button.addEventListener('click', () => {
+      const speed = button.dataset.speed;
+
+      document.querySelectorAll('.sim-speed-button').forEach((item) => {
+        item.classList.toggle('is-dark', item === button);
+      });
+
+      document.querySelectorAll('#simulation-results video').forEach((video) => {
+        const parts = video.getAttribute('src').split('/');
+        const filename = parts.pop();
+        parts[parts.length - 1] = `×${speed}`;
+
+        const canonicalName = filename
+          .replace(/\.mp4$/, '')
+          .replace(/_x[24]$/, '');
+        const nextFilename = `${canonicalName}${speed === '1' ? '' : `_x${speed}`}.mp4`;
+        const nextSrc = `${parts.join('/')}/${nextFilename}`;
+
+        if (video.getAttribute('src') !== nextSrc) {
+          video.setAttribute('src', nextSrc);
+          video.load();
+          video.play();
+        }
+      });
+    });
+  });
+</script>
+
+
+</body>
+
+</html>
