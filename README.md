@@ -4,7 +4,7 @@ This is the official repository for the paper:
 
 > **DragMesh-2: Physically Plausible Dexterous Hand-Object Interaction with Articulated Objects**
 >
-> [Tianshan Zhang](https://neptune-t.github.io/)*, [Yijia Duan](https://github.com/yijiaduan111)*, [Yanjun Li](https://github.com/yanjun711)*, [Zeyu Zhang](https://steve-zeyu-zhang.github.io/)*<sup>lead</sup>, and [Hao Tang](https://ha0tang.github.io/)<sup>corr</sup>
+> [Tianshan Zhang](https://neptune-t.github.io/)\*, [Yijia Duan](https://github.com/yijiaduan111)\*, [Yanjun Li](https://github.com/yanjun711)\*, [Zeyu Zhang](https://steve-zeyu-zhang.github.io/)\*<sup>lead</sup>, and [Hao Tang](https://ha0tang.github.io/)<sup>corr</sup>
 >
 > School of Computer Science, Peking University
 >
