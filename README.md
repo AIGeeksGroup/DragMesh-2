@@ -8,12 +8,16 @@ This is the official repository for the paper:
 >
 > School of Computer Science, Peking University
 >
-> *Equal contribution. <sup>lead</sup>Project lead. <sup>corr</sup>Corresponding author: bjdxtanghao@gmail.com.
+> *Equal contribution. <sup>†</sup>Project lead. <sup>‡</sup>Corresponding author: bjdxtanghao@gmail.com.
 >
 > ### [Paper](https://arxiv.org/abs/) | [Website](https://aigeeksgroup.github.io/DragMesh-2) | [Models](https://huggingface.co/AIGeeksGroup/DragMesh-2) | [Data](https://huggingface.co/datasets/AIGeeksGroup/DragMesh-2)
 
 > [!NOTE]
 > The simulation demo and real-robot demo are intentionally left as placeholders in this release. They will be added after the corresponding experiments are finalized.
+
+https://github.com/user-attachments/assets/fd683ff5-0d42-4f74-8d71-f89878c9e1fb
+
+
 
 ## Citation
 
