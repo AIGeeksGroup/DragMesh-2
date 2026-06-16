@@ -10,7 +10,7 @@ This is the official repository for the paper:
 >
 > *Equal contribution. <sup>†</sup>Project lead. <sup>‡</sup>Corresponding author: bjdxtanghao@gmail.com.
 >
-> ### [Paper](https://arxiv.org/abs/) | [Website](https://aigeeksgroup.github.io/DragMesh-2) | [Models](https://huggingface.co/AIGeeksGroup/DragMesh-2) | [Data](https://huggingface.co/datasets/AIGeeksGroup/DragMesh-2)
+> ### [Paper](https://arxiv.org/abs/2606.15133) | [Website](https://aigeeksgroup.github.io/DragMesh-2) | [Models](https://huggingface.co/AIGeeksGroup/DragMesh-2) | [Data](https://huggingface.co/datasets/AIGeeksGroup/DragMesh-2)
 
 > [!NOTE]
 > The simulation demo and real-robot demo are intentionally left as placeholders in this release. They will be added after the corresponding experiments are finalized.
@@ -24,7 +24,12 @@ https://github.com/user-attachments/assets/fd683ff5-0d42-4f74-8d71-f89878c9e1fb
 If you find our code or paper useful, please consider citing:
 
 ```bibtex
-
+@article{zhang2026dragmesh2,
+  title={DragMesh-2: Physically Plausible Dexterous Hand-Object Interaction with Articulated Objects},
+  author={Zhang, Tianshan and Duan, Yijia and Li, Yanjun and Zhang, Zeyu and Tang, Hao},
+  journal={arXiv preprint arXiv:2606.15133},
+  year={2026}
+}
 ```
 
 ## Intro
