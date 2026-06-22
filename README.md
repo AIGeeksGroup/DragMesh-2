@@ -1,4 +1,5 @@
-# DragMesh-2: Physically Plausible Dexterous Hand-Object Interaction with Articulated Objects
+# DragMesh-2: Physically Plausible Dexterous Hand-Object Interaction with Articulated Objects 
+[![Paper of the day](https://img.shields.io/badge/%232%20Paper%20of%20the%20day-ADD8E6?style=for-the-badge)](https://huggingface.co/papers/2606.15133)
 
 This is the official repository for the paper:
 
